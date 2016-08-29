@@ -2,4 +2,7 @@ Edit!
 !!
 dsaffsfsfsfsfsfs
 yoyo
+<<<<<<< HEAD
 ble
+=======
+>>>>>>> OptimusPr1me-master
