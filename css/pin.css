@@ -3,22 +3,22 @@
 	margin	: 0 auto;
 }
 
-#drawSection {
+#drawSection, #inputSection {
 	width	: 100%;
 }
 
-#drawSection::after { 
+#drawSection::after, #inputSection::after { 
 	content: "";
 	display: block; 
 	clear: both;
 }
 
-#drawSection #numberContainer {
+.numberContainer {
 	margin	: 0 auto;
 	width		: 20%;
 }
 
-#drawSection .numberContainer > div {
+#wrapper .numberContainer > div {
 	float			: left;
 	text-align	: center;
 	width			: 25%;
