@@ -1,0 +1,25 @@
+#wrapper {
+	width		: 1200px;
+	margin	: 0 auto;
+}
+
+#drawSection {
+	width	: 100%;
+}
+
+#drawSection::after { 
+	content: "";
+	display: block; 
+	clear: both;
+}
+
+#drawSection #numberContainer {
+	margin	: 0 auto;
+	width		: 20%;
+}
+
+#drawSection .numberContainer > div {
+	float			: left;
+	text-align	: center;
+	width			: 25%;
+}
