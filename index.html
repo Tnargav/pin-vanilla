@@ -1,53 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>PIN</title>
-	<link rel="stylesheet" type="text/css" href="pin.css">
-</head>
-<body>
-	<div id=wrapper">
-		<div id="cashTop">
-			<div id="draw">
-				<div id="draw1"></div>
-				<div id="draw2"></div>
-				<div id="draw3"></div>
-				<div id="draw4"></div>
-			</div>
-			<div id="match">
-				<div id="match1"></div>
-				<div id="match2"></div>
-				<div id="match3"></div>
-				<div id="match4"></div>
-			</div>
-		</div>
-		<div id="cashBottom">
-			<div id="keyboard">
-				<table>
-					<tr>
-						<td>1</td>
-						<td>2</td>
-						<td>3</td>
-					</tr>
-					<tr>
-						<td>4</td>
-						<td>5</td>
-						<td>6</td>
-					</tr>
-					<tr>
-						<td>7</td>
-						<td>8</td>
-						<td>9</td>
-					</tr>
-					<tr>
-						<td>*</td>
-						<td>0</td>
-						<td>#</td>
-					</tr>
-				</table>
+	<head>
+		<meta charset="UTF-8">
+		<title>PIN</title>
+		<link rel="stylesheet" type="text/css" href="pin.css">
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="cashTop">
+				<form>
+					<input id="draw" type="submit" value="DRAW">
+					<input id="draw-1" type="text" readonly="true">
+					<input id="draw-2" type="text" readonly="true">
+					<input id="draw-3" type="text" readonly="true">
+					<input id="draw-4" type="text" readonly="true">
+				</form>
+				<form>
+					<input id="match-1" type="text" readonly="true">
+					<input id="match-2" type="text" readonly="true">
+					<input id="match-3" type="text" readonly="true">
+					<input id="match-4" type="text" readonly="true">
+					<input id="match" type="submit" value="MATCH">
+				</form>
 			</div>
 		</div>
-		<div id="input"></div>
-	</div>
-</body>
+	<script src="js/myScript.js"></script>
+	</body>
 </html>
