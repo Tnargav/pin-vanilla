@@ -50,4 +50,10 @@ table {
 input {
 	width: 15%;
 	text-align: center;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+form {
+	padding: 10px;
 }
