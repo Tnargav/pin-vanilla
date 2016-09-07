@@ -19,17 +19,38 @@
 		/*
 			form - elements with all input fields.
 			It is needed for allowing a comparison between forms.
+			Get object that will have id name value.
 		*/
 		var form = document.forms[formId],
 			childrenLength = form.children.length,
-			aNumbers = []; //array for storing random numbers
+			aNumbers = [], //array for storing random numbers
+			formValues = {
+				id: "",
+				name: "",
+				value: 0
+			}; 
 
 			for(var i=0;i<childrenLength;i++) {
 
+			//1.wrzocic obiekty do tablicy
+			//2.potrzebujemy obiekty - formValues={}
+			//3.wrzucic obiekty z formy do tablicy
+			 
 				if(form[i].id.startsWith("draw")) {
-					aNumbers.push(draw());
+					aNumbers.push({
+						id:  form[i].id,
+						name: form[i].id,
+						value: draw()
+					});
 				}
 			}
+				/*
+				for(var i=0;i<aNumbers.length;i++) {
+
+					console.log(aNumbers[i]);
+				}
+				*/
+			
 			return aNumbers;
 	}
 	/*
@@ -38,9 +59,29 @@
 		@param1 {String}
 		@param2 {Array}
 	*/
-	function setFormValues(formId, aFormFieldsValues) {
+	function setFormValues(formId, aFormFieldsValues){
 		
+		/*
+			formId - Id formy na ktorej chcemy ustawic zmienne
+			aFormFieldsValues - tablica obiektow ktora przechowuje obiekty formy
+			
+		*/
 		
+		var form = document.forms[formId],
+				childrenLength = form.children.length,
+				aFormIndex = 0;
+		//debugger;
+		for(var i=0;i<childrenLength;i++) {
+			
+			if(form[i].id.startsWith("draw")) {
+				form[i].value = aFormFieldsValues[aFormIndex].value;
+				aFormIndex++;
+			}
+			
+		}
 	}
-	getFormFields("displayForm");
+	var aForm = getFormFields("displayForm");
+	
+	setFormValues("displayForm", aForm);
+	
 })();
